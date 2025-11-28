@@ -1,9 +1,9 @@
 // src/App.jsx
 import React from 'react';
 import './App.css';
-import Profile from './komponen/profile';
-import Skills from './komponen/skill';
-import Experiences from './komponen/experience';
+import Profile from './komponen/Profile';
+import Skills from './komponen/Skill';
+import Experiences from './komponen/Experience';
 import data from '../dataMahasiswa.json'; // path ke file di root project
 
 function App() {
