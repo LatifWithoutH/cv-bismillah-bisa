@@ -1,0 +1,314 @@
+/* --- Reset & Variables --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #16f9b9; /* Orange instead of blue */
+  --bg-page: #a6e9ef; /* Warm light background */
+  --card-white: #c5f1f4;
+  --text-main: #59dde2; /* Dark brown for text */
+  --text-muted: #319f99; /* Brown muted text */
+  
+  /* Badge Colors - Orange/Brown theme */
+  --bg-green: #07fafa; --text-green: #2f9aa2;
+  --bg-blue: #0ae9f0;  --text-blue: #167d9c;
+  --bg-purple: #06f3ef; --text-purple: #18808e;
+}
+
+body {
+  background-color: var(--bg-page);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* --- UPDATE 1: PERLEBAR CONTAINER --- */
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card General */
+.card {
+  background: var(--card-white);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 32px;
+  border: 1px solid #fed7aa;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-main);
+}
+
+/* --- PROFILE SECTION --- */
+.profile-card {
+  background: linear-gradient(135deg, #16f9d7 0%, #0cd8ea 100%); /* Orange gradient */
+  color: white;
+  border: none;
+}
+
+.profile-content {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+  background: white;
+  flex-shrink: 0;
+}
+
+.profile-text { flex: 1; }
+
+.profile-text h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.job-title {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.location {
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  max-width: 800px;
+}
+
+.btn-visit {
+  background: white;
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.btn-visit:hover { transform: translateY(-2px); }
+
+/* --- UPDATE 2: SKILLS JADI 3 KOLOM --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-item {
+  border: 1px solid #aaf1fe;
+  padding: 20px;
+  border-radius: 12px;
+  background: #edfeff;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.skill-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.skill-icon { width: 40px; height: 40px; }
+
+.skill-info h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+.skill-info p { font-size: 0.85rem; color: var(--text-muted); margin: 2px 0 0 0; }
+
+.badge-main {
+  background: var(--primary); color: white;
+  font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; font-weight: 600;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.progress-label {
+  display: flex; justify-content: space-between;
+  font-size: 0.85rem; color: var(--text-muted); font-weight: 500;
+}
+.progress-bar-bg {
+  width: 100%; height: 8px; background: #aafef1; border-radius: 10px;
+}
+.progress-bar-fill { height: 100%; background: var(--primary); border-radius: 10px; }
+
+/* --- EXPERIENCE SECTION --- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 24px; 
+  top: 48px;
+  bottom: 0;
+  width: 2px;
+  background-color: #aafef8;
+  z-index: 0;
+}
+
+.timeline-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+  border: 4px solid white; 
+}
+
+.icon-active {
+  background-color: #16f9db; /* Orange */
+  color: white;
+}
+
+.icon-passive {
+  background-color: #d5fff4;
+  color: #129a95;
+}
+
+.briefcase-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.timeline-content.card-inner {
+  flex: 1;
+  border: 1px solid #aafdfe;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #edfffe;
+  transition: box-shadow 0.2s;
+}
+
+.timeline-content.card-inner:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.exp-header {
+  display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px;
+}
+
+.exp-header h3 { font-size: 1rem; font-weight: 600; color: #073943; margin: 0; }
+
+.exp-org {
+  font-size: 0.9rem; color: #12989a; margin-bottom: 12px; font-weight: 400;
+}
+
+.exp-date {
+  font-size: 0.85rem; color: #0cb9c2;
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+}
+
+.calendar-icon { width: 16px; height: 16px; color: #3cfbeb; }
+
+.badge-current {
+  border: 1px solid #16f9ee; color: #16f1f9;
+  font-size: 0.7rem; padding: 2px 8px; border-radius: 99px; font-weight: 600;
+}
+
+.exp-desc {
+  font-size: 0.95rem; line-height: 1.6; color: #127c7c; margin-bottom: 16px;
+}
+
+/* Badges */
+.badge-type {
+  font-size: 0.7rem; padding: 4px 10px; border-radius: 6px;
+  font-weight: 600; text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+.badge-type.project { background: #d5ffff; color: #0cb6c2; }
+.badge-type.internship { background: #edfffe; color: #0cc9ea; } 
+.badge-type.organization { background: #c7fbfe; color: #06d9d2; }
+
+.tech-stack { display: flex; gap: 8px; flex-wrap: wrap; }
+.tech-tag {
+  background: #d5feff; color: #129a98;
+  padding: 4px 12px; border-radius: 99px; 
+  font-size: 0.75rem; font-weight: 600;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+  .app-container { padding: 0; }
+  .profile-content { flex-direction: column; text-align: center; align-items: center; }
+  .profile-photo { width: 120px; height: 120px; }
+  .tags { justify-content: center; }
+  
+  .skills-grid { grid-template-columns: 1fr; }
+  
+  .exp-header { flex-direction: column; gap: 8px; }
+  .timeline-item { gap: 16px; }
+  .timeline-content.card-inner { padding: 16px; }
+}

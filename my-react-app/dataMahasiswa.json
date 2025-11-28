@@ -1,0 +1,111 @@
+{
+  "id": 21,
+  "slug": "aziz-ilham-rahman-L200230274",
+
+  "profile": {
+    "full_name": "Aziz Ilham Rahman",
+    "nim": "L200230274",
+    "prodi": "Teknik Informatika",
+    "angkatan": "2023",
+    "photo_url": "foto.jpg",
+    "headline": "Fullstack Web Developer | Data Analyst | Video Editor",
+    "short_bio": "Mahasiswa UMS dengan minat pada pengembangan web fullstack.",
+    "location": "Surakarta, Jawa Tengah",
+    "portfolio_url": "https://azizilham.com"
+  },
+
+  "skills": [
+    {
+      "id": 1,
+      "name": "ReactJS",
+      "category": "technical",
+      "level": "intermediate",
+      "is_main": true,
+      "years_of_experience": 1,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    },
+    {
+      "id": 2,
+      "name": "UI & UX Design Figma",
+      "category": "technical",
+      "level": "intermediate",
+      "is_main": true,
+      "years_of_experience": 1,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+    },
+    {
+      "id": 3,
+      "name": "Capcut Video Editing",
+      "category": "Creator",
+      "level": "intermediate",
+      "years_of_experience": 1,
+      "is_main": true,
+      "icon_url": "capcut.png"
+    },
+    {
+      "id": 4,
+      "name": "Data Analysis with Python",
+      "category": "Analyst",
+      "level": "intermediate",
+      "years_of_experience": 1,
+      "is_main": true,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    }
+  ],
+
+  "experiences": [
+    {
+      "id": 101,
+      "title": "Web Developer Intern",
+      "organization": "PT SHA Solo",
+      "experience_type": "internship",
+      "start_date": "2024-07-01",
+      "end_date": "2024-12-31",
+      "is_current": true,
+      "description": "Membuat Website Company Profile menggunakan ReactJS dan Tailwind CSS.",
+      "technologies": ["ReactJS", "Tailwind CSS"],
+      "image_url": "https://cdn.example.com/company/digitalsolusi.png"
+    }, {
+      "id": 103,
+      "title": "Full-Stack Developer",
+      "organization": "Freelance Project",
+      "experience_type": "project",
+      "start_date": "2025-01-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Membangun API backend UMKM menggunakan DRF dan PostgreSQL.",
+      "technologies": ["Django", "DRF", "PostgreSQL"],
+      "image_url": "https://cdn.example.com/projects/umkm-inventory.png"
+    },
+    {
+      "id": 102,
+      "title": "Data Analyst",
+      "organization": "PT Pertamina persero",
+      "experience_type": "internship",
+      "start_date": "2024-03-01",
+      "end_date": "2024-06-30",
+      "is_current": true,
+      "description": "Menjadi Salah Satu Stake Holder pada PT pertamina Solo.",
+      "technologies": ["Microsoft Excel", "Google Sheets", "Apache Spark","Hadoop"],
+      "image_url": "https://cdn.example.com/logo/ukm-informatika.png"
+    } ,
+    {
+      "id": 102,
+      "title": "Video Editor Intern",
+      "organization": "PT Digital Social Media",
+      "experience_type": "internship",
+      "start_date": "2024-03-01",
+      "end_date": "2024-06-30",
+      "is_current": true,
+      "description": "Membuat Konten Video sekaligus Mengedit Video untuk media sosial Perusahaan.",
+      "technologies": ["Capcut", "Canva", "LumaFusion","Adobe Premiere"],
+      "image_url": "https://cdn.example.com/logo/ukm-informatika.png"
+    }
+  
+  ],
+
+  "statistics": {
+    "views_count": 127,
+    "profile_complete_percent": 92
+  }
+}
